@@ -1,0 +1,48 @@
+apiVersion: sql.cnrm.cloud.google.com/v1beta1
+kind: SQLInstance
+metadata:
+  annotations:
+    cnrm.cloud.google.com/management-conflict-prevention-policy: none 
+    cnrm.cloud.google.com/project-id: mysamplooohjcacabd12345 #replace this
+    cnrm.cloud.google.com/state-into-spec: merge
+  finalizers:
+  - cnrm.cloud.google.com/finalizer
+  - cnrm.cloud.google.com/deletion-defender
+  generation: 2
+  labels:
+    app.kubernetes.io/instance: mysampleappproj1dbtest
+    argocd.argoproj.io/instance: mysampleappproj1dbtest
+  name: mysampleappproj1dbtest
+  namespace: dbtest
+spec:
+  databaseVersion: SQLSERVER_2019_ENTERPRISE
+  encryptionKMSCryptoKeyRef:
+    external: projects/mysamplooohjcacabd12345/locations/us-central1/keyRings/mysamplooohjcacabd-keyring/cryptoKeys/mysamplooohjcacabd-key
+  region: us-central1
+
+  rootPassword:
+    value: "stay-Ok-R00t#" #replace this
+  settings:
+    activationPolicy: ALWAYS
+    availabilityType: REGIONAL
+    backupConfiguration:
+      backupRetentionSettings:
+        retainedBackups: 7
+        retentionUnit: COUNT
+      enabled: true
+      location: us
+      startTime: "14:30"
+      transactionLogRetentionDays: 7
+    diskAutoresize: true
+    diskAutoresizeLimit: 0
+    diskSize: 25
+    diskType: PD_SSD
+    ipConfiguration:
+      allocatedIpRange: private-ip-alloc
+      ipv4Enabled: true
+      privateNetworkRef:
+        external: projects/mysamplooohjcacabd12345/global/networks/internalnet #replace this
+    locationPreference:
+      zone: us-central1-b
+    pricingPlan: PER_USE
+    tier: db-custom-2-7680

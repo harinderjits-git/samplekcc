@@ -1,0 +1,49 @@
+---
+global:
+  owner: None
+  location: "US"
+  regions:
+  - &primaryregion "us-central1"
+  - &drregion "us-east4"
+  remote_state:
+    bucket_name: "tfstateremote10xxx"
+  db_password: &common_password stays-overhung-reconcile #replace this value 
+  billing_account: XXXXXXXX  #replace this value also in ../../terraform/gcp/rundir_init/init.tf
+  project:
+    parent: folders/445XXXXXX #replace this value also in ../../terraform/gcp/rundir_init/init.tf
+    name: mysamplooohjcacabd #replace this value
+    id: mysamplooohjcacabd12345 #replace this value
+  terraform_deployment_account: tf-deploy-sa
+  terraform_deployment_sa_roles:
+  - roles/container.clusterAdmin
+  - roles/cloudsql.admin
+  - roles/container.admin
+  userDefinedString: appproject101
+  additionalUserDefinedString: ''
+  assign-roles: []
+  name_prefix:
+    - sampleapp
+  labels:
+    solutionprovider: harinder
+    solution: sampleapp
+
+prod_workloads:
+  prd:
+    region: *primaryregion
+    name:
+      - prodprimary
+      - prd
+    labels:
+      env: prodprimary
+
+    gke:
+      name: 
+        - gkeuc1
+      admin_username: gke_admin
+      kubernetes_version: "1.24.6"
+      node_count_per_ig: 2
+      gke_agent_vm_size: "e2-medium" # 8 core / 32GB
+      zones:
+        - "a"
+        - "b"
+
