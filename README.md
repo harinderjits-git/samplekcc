@@ -3,8 +3,9 @@
 # Description 
 
 This repositry shares :
-- Terraform and Terragrunt code to provision all the infrastructure in Azure Cloud
-- config connector manifests required
+- Terraform and Terragrunt code to provision the base infrastructure in GCP Cloud
+- config connector manifests required to provison CloudSQL Instance, Database and login
+
 # Prerequisites:
 
 Please have the below installed on your WSL
