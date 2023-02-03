@@ -5,8 +5,8 @@ module "project" {
     "solution"         = "sampleapp"
   }
   parent          = "folders/542XXXXXXX39" #replace this
-  project_name    = "mysamplooohjcacabd"
-  project_id      = "mysamplooohjcacabd12345"
+  project_name    = "mysamployuhjcacabd"
+  project_id      = "mysamployuhjcacabd12345"
   billing_account = "00E11A-XXXXXX" #replace this
   services        = [
   "sqladmin.googleapis.com"
@@ -44,8 +44,8 @@ module "bucket" {
 
 module "kms" {
   source = "../modules/kmsmodule"
-  name = "mysamplooohjcacabd"
-  project = "mysamplooohjcacabd12345"
+  name = "mysamployuhjcacabd"
+  project = "mysamployuhjcacabd12345"
   depends_on = [
     module.project
   ]

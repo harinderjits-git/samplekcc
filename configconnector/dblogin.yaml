@@ -4,7 +4,7 @@ metadata:
   annotations:
     cnrm.cloud.google.com/management-conflict-prevention-policy: none
     cnrm.cloud.google.com/mutable-but-unreadable-fields: '{"spec":{"password":{"valueFrom":{"secretKeyRef":{"key":"password","name":"ts-db-user"}}}}}'
-    cnrm.cloud.google.com/project-id: mysamplooohjcacabd12345 #replace this
+    cnrm.cloud.google.com/project-id: mysamployuhjcacabd12345 #replace this
   finalizers:
   - cnrm.cloud.google.com/finalizer
   - cnrm.cloud.google.com/deletion-defender

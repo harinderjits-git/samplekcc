@@ -1,0 +1,10 @@
+apiVersion: core.cnrm.cloud.google.com/v1beta1
+kind: ConfigConnectorContext
+metadata:
+  # you can only have one ConfigConnectorContext per namespace
+  name: configconnectorcontext.core.cnrm.cloud.google.com
+  namespace: dbtest
+spec:
+  googleServiceAccount: "configconnectorsa@mysamployuhjcacabd12345.iam.gserviceaccount.com"
+
+  # only if using namespace mode

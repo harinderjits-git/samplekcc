@@ -1,29 +1,25 @@
-# Sample application deployment on Kubernetes and SQLServer (Azure and GCP)
+# Sample CloudSQL deployment on GCP using config connector
 
 # Description 
 
 This repositry shares :
-- The application code in golang
 - Terraform and Terragrunt code to provision all the infrastructure in Azure Cloud
-- helm chart to deploy application on k8s cluster
+- config connector manifests required
 # Prerequisites:
 
 Please have the below installed on your WSL
 
 - Install terraform
 - Install terragrunt
-- Install az CLI (for azure)
 - Install Docker
 - Install gcloud cli (for GCP)
 
 # Usage
--  Usage for Azure has been detailed in https://medium.com/@harinderjitss/testing-business-continuity-of-sample-application-using-aks-and-azure-sql-server-aedf1637797d
- 
-- Usage for GCP has been detailed in https://medium.com/@harinderjitss/testing-business-continuity-of-a-sample-application-using-gke-and-gcp-cloudsql-a21167125757
+
+- https://harinderjitss.medium.com/creating-a-cloudsql-using-config-connector-694a9f63358f
 
 
-
-# credits
-
-Original sampleapp go code repository: https://github.com/gotochkin/sample-app
-
+# References
+- https://cloud.google.com/sql/docs/sqlserver/configure-cmek
+- https://cloud.google.com/config-connector/docs/reference/resource-docs/sql/sqlinstance
+- https://cloud.google.com/config-connector/docs/how-to/install-upgrade-uninstall#before_you_begin

@@ -175,7 +175,8 @@ resource "google_service_account_iam_binding" "configconnectorsa-binding" {
   service_account_id = data.google_service_account.configconnectorsa.name
   role               = "roles/iam.workloadIdentityUser"
   members = [
-  "serviceAccount:${var.project}.svc.id.goog[cnrm-system/cnrm-controller-manager]",
+ # for namespaced mode "serviceAccount:${var.project}.svc.id.goog[cnrm-system/cnrm-controller-manager-dbtest]",
+    "serviceAccount:${var.project}.svc.id.goog[cnrm-system/cnrm-controller-manager]"
   ]
   depends_on = [
     google_container_node_pool.private-np-1,

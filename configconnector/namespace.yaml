@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Namespace
 metadata:
   annotations:
-    cnrm.cloud.google.com/project-id: mysamplooohjcacabd12345 #replace this
+    cnrm.cloud.google.com/project-id: mysamployuhjcacabd12345 #replace this
   labels:
     kubernetes.io/metadata.name: dbtest
   name: dbtest

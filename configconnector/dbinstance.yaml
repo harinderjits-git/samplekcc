@@ -3,7 +3,7 @@ kind: SQLInstance
 metadata:
   annotations:
     cnrm.cloud.google.com/management-conflict-prevention-policy: none 
-    cnrm.cloud.google.com/project-id: mysamplooohjcacabd12345 #replace this
+    cnrm.cloud.google.com/project-id: mysamployuhjcacabd12345 #replace this
     cnrm.cloud.google.com/state-into-spec: merge
   finalizers:
   - cnrm.cloud.google.com/finalizer
@@ -17,7 +17,7 @@ metadata:
 spec:
   databaseVersion: SQLSERVER_2019_ENTERPRISE
   encryptionKMSCryptoKeyRef:
-    external: projects/mysamplooohjcacabd12345/locations/us-central1/keyRings/mysamplooohjcacabd-keyring/cryptoKeys/mysamplooohjcacabd-key
+    external: projects/mysamployuhjcacabd12345/locations/us-central1/keyRings/mysamployuhjcacabd-keyring/cryptoKeys/mysamployuhjcacabd-key
   region: us-central1
 
   rootPassword:
@@ -41,7 +41,7 @@ spec:
       allocatedIpRange: private-ip-alloc
       ipv4Enabled: true
       privateNetworkRef:
-        external: projects/mysamplooohjcacabd12345/global/networks/internalnet #replace this
+        external: projects/mysamployuhjcacabd12345/global/networks/internalnet #replace this
     locationPreference:
       zone: us-central1-b
     pricingPlan: PER_USE

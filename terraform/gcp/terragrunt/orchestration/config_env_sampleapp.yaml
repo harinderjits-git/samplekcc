@@ -11,8 +11,8 @@ global:
   billing_account: XXXXXXXX  #replace this value also in ../../terraform/gcp/rundir_init/init.tf
   project:
     parent: folders/445XXXXXX #replace this value also in ../../terraform/gcp/rundir_init/init.tf
-    name: mysamplooohjcacabd #replace this value
-    id: mysamplooohjcacabd12345 #replace this value
+    name: mysamployuhjcacabd #replace this value
+    id: mysamployuhjcacabd12345 #replace this value
   terraform_deployment_account: tf-deploy-sa
   terraform_deployment_sa_roles:
   - roles/container.clusterAdmin
